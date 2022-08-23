@@ -1,0 +1,17 @@
+{
+    group: lexer
+    {
+        map: 
+        {
+            { '{' : 'char', 'openbracket' }
+            { '}' : 'char', 'closebracket' }
+            { '(' : 'char', 'openparan' }
+            { ')' : 'char', 'closeparan' }
+            { ';' : 'char', 'semi' } 
+            { 'int' : 'keyword', 'integer' }
+            { 'return' : 'keyword', 'return' }
+            { [integer] : 'iconstant', * }
+            { [alphanumeric] : 'identifier', * }
+        }
+    }
+}
